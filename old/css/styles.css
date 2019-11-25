@@ -1,0 +1,133 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23.10.2018, 13:04:32
+    Author     : Михаил
+*/
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Russo One', sans-serif;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    font-size: 57px;
+    line-height: 0;
+    text-transform: uppercase;
+}
+#score{
+    background: #8f7a66;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #f9f6f2;
+}
+#btn{
+    background: #8f7a66;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f9f6f2;
+    transition: 0.3s;
+    
+}
+#btn:hover{
+    cursor: pointer;
+    background: #f65e3b;
+}
+#board{
+/*    display: flex;
+    flex-wrap: wrap;*/
+    overflow: hidden;
+    background: #bbada0;
+    border: 10px solid #bbada0;
+    border-radius: 20px;
+    margin: 40px 0;
+    height: 60vh;
+    width: 60vh;
+    position: relative;
+}
+#gameover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.85);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 5;
+    font-size: 36px;
+    transition: 0.5s;
+}
+#gameover.active{
+    opacity: 1;
+}
+.cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 10px solid #bbada0;
+    border-radius: 20px;
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    z-index: 1;
+    font-size: 36px;
+    transition: 0.1s;
+}
+.cell[data-color="2"]{
+    background: #eee4da;
+}
+.cell[data-color="4"]{
+    background: #ede0c8;
+}
+.cell[data-color="8"]{
+    background: #f2b179;
+}
+.cell[data-color="16"]{
+    background: #f59563;
+}
+.cell[data-color="32"]{
+    background: #f67c5f;
+}
+.cell[data-color="64"]{
+    background: #f65e3b;
+}
+.cell[data-color="128"]{
+    background: #edcf72;
+}
+.cell[data-color="256"]{
+    background: #edcc61;
+}
+.cell[data-color="512"]{
+    background: #edc850;
+}
+.cell[data-color="1024"]{
+    background: #edc53f;
+}
+.cell[data-color="2048"]{
+    background: #edc22e;
+}

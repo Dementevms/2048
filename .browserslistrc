@@ -1,0 +1,13 @@
+[legacy]
+>0.5%
+last 2 versions
+not dead
+not op_mini all
+IE 10
+
+[development]
+last 1 chrome version
+last 1 firefox version
+
+[test]
+node current
